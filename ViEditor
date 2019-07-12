@@ -1,0 +1,88 @@
+Vi/VIM - Text Editor
+Cat has problems with the Navigation.
+
+Vi/Vim can be used to edit the text files and it also provides following features:
+   Navigation Support
+   Search Functionality
+   Undo/Redo Operations
+
+       # vi <file_name>
+
+           i - insert the data
+           a - append mode
+
+          esc {to come out of insert mode}  
+:wq {save and quit}
+
+
+Navigation in Vi
+
+   h - left arrow
+   l - right arrow
+   j - down arrow
+   k - up arrow
+
+To go word by word in forward direction    - w 
+To go word by 5 words in forward direction  -  5w
+To go word by word in backward direction - b 
+To go word by 5 word in backward direction - 5b
+
+Page Up - ctrl + u
+Page Down - ctrl + d
+
+Beginning of the File - gg
+End of the file - G
+
+To view the line numbers :se nu
+To go to a particular line we use 30G (or) :30
+To hide the line numbers :set nonumber
+
+
+Editing using Vi
+
+To go into insert mode we use "i"
+   In insert mode commands doesn't work
+   Once editing is done save changes by following:
+       :wq   { w-save/write, q-quit }
+
+a - append diff is in insert mode character is placed before the cursor position in append mode character is placed after the cursor position
+
+I - insert at beginning of the line
+A - insert at the end of the line
+
+o - put text in a new line below current line
+O - put text in a new line above current line
+
+x - will delete a character for you
+5x - from cursor position next 5 characters will be     deleted
+dw - delete word
+4dw - delete 4 words
+dd - delete your line
+5dd - delete 5 lines
+
+:3,15d - delete lines from 3 to 15
+
+
+u - Undo operation
+cntrl + r - Redo operation
+
+yl + p - copying a character to paste it we use "p"
+yw + p - copy and pastes a word {cursor position}
+yy + p - copies and pastes current line
+5Y  + p - copies and pastes 5 lines from cursor position
+
+
+/string - to search for pattern in forward direction
+?string - to search for pattern in backward direction
+   say multiple occurrences are there use "n" to goto next occurence
+
+
+
+0 	move to beginning of the current line
+$ 	move to end of line
+H 	move to the top of the current window (high)
+M 	move to the middle of the current window (middle)
+L 	move to the bottom line of the current window (low)
+1G 	move to the first line of the file
+20G 	move to the 20th line of the file
+G 	move to the last line of the file 
